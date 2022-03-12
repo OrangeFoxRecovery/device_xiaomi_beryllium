@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# QCOM Decryption
+PRODUCT_PACKAGES += \
+	qcom_decrypt \
+	qcom_decrypt_fbe
+
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libicuuc \

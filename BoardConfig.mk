@@ -91,6 +91,9 @@ PLATFORM_VERSION := 16.1.0
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 
+# QCOM Decryption
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
