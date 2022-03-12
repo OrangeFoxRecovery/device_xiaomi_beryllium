@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Inherit from beryllium device
+$(call inherit-product, device/xiaomi/beryllium/device.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := beryllium
 PRODUCT_NAME := twrp_beryllium
