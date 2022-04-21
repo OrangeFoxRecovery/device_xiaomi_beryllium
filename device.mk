@@ -21,26 +21,30 @@ PRODUCT_PACKAGES += \
 
 TARGET_RECOVERY_DEVICE_MODULES := \
 	libcap \
-	libion \
 	libpcrecpp \
 	libxml2 \
 	android.hidl.base@1.0 \
 	android.hardware.boot@1.0 \
 	ashmemd \
 	ashmemd_aidl_interface-cpp \
-	libashmemd_client
+	libashmemd_client \
+	vendor.display.config@1.0 \
+	vendor.display.config@2.0 \
+	libdisplayconfig.qti
 
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES := \
 	$(TARGET_OUT_EXECUTABLES)/ashmemd
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES := \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
+	$(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
+	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
 
 PRODUCT_COPY_FILES += \
 	$(OUT_DIR)/target/product/beryllium/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
