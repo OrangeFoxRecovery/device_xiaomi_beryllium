@@ -19,21 +19,32 @@ PRODUCT_PACKAGES += \
 	qcom_decrypt \
 	qcom_decrypt_fbe
 
-# Additional Libraries
-TARGET_RECOVERY_DEVICE_MODULES += \
+TARGET_RECOVERY_DEVICE_MODULES := \
+	libcap \
+	libicui18n \
 	libion \
+	libicuuc \
+	libpcrecpp \
 	libxml2 \
-	libandroidicu \
-	libqcbor \
-	libhardware_legacy \
-	android.system.suspend@1.0
+	android.hidl.base@1.0 \
+	android.hardware.boot@1.0 \
+	ashmemd \
+	ashmemd_aidl_interface-cpp \
+	libashmemd_client
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES := \
+	$(TARGET_OUT_EXECUTABLES)/ashmemd
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES := \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libqcbor.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libhardware_legacy.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/android.system.suspend@1.0.so
+	$(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 PRODUCT_COPY_FILES += \
 	$(OUT_DIR)/target/product/beryllium/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
