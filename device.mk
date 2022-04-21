@@ -21,9 +21,7 @@ PRODUCT_PACKAGES += \
 
 TARGET_RECOVERY_DEVICE_MODULES := \
 	libcap \
-	libicui18n \
 	libion \
-	libicuuc \
 	libpcrecpp \
 	libxml2 \
 	android.hidl.base@1.0 \
@@ -37,8 +35,6 @@ TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES := \
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES := \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
-	$(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
