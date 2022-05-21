@@ -18,7 +18,6 @@
 /firmware_image		emmc	/dev/block/bootdevice/by-name/modem		flags=display="Firmware Image";backup=1;flashimg=1
 /cust			ext4	/dev/block/bootdevice/by-name/cust		flags=display="Cust";backup=1
 /cust_image		ext4	/dev/block/bootdevice/by-name/cust		flags=display="Cust Image";backup=1;flashimg=1
-/misc			emmc	/dev/block/bootdevice/by-name/misc
 /modem			emmc	/dev/block/bootdevice/by-name/modem		flags=backup=1;display="Modem"
 /bluetooth		emmc	/dev/block/bootdevice/by-name/bluetooth		flags=backup=1;subpartitionof=/modem
 /dsp			emmc	/dev/block/bootdevice/by-name/dsp		flags=backup=1;subpartitionof=/modem

@@ -10,3 +10,4 @@
 /dev/block/bootdevice/by-name/userdata		/data		ext4		noatime,nosuid,nodev,barrier=0,noauto_da_alloc				wait,check,fileencryption=ice,quota
 /dev/block/bootdevice/by-name/userdata		/data		f2fs		nosuid,nodev,noatime,discard,background_gc=off,fsync_mode=nobarrier	wait,fileencryption=ice,quota
 /dev/block/bootdevice/by-name/cust		/cust		ext4		ro,nosuid,nodev,barrier=1,data=ordered					wait,check
+/dev/block/bootdevice/by-name/misc		/misc		emmc		defaults								defaults
