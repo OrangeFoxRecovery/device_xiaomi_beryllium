@@ -18,3 +18,16 @@ LOCAL_PATH := device/xiaomi/beryllium
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Additional Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+	libion \
+	vendor.display.config@1.0 \
+	vendor.display.config@2.0 \
+	libdisplayconfig.qti
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
