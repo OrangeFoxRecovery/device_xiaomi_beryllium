@@ -26,13 +26,13 @@ PRODUCT_PACKAGES += \
 
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
+	android.system.suspend@1.0 \
+	libhardware_legacy \
 	libion \
-	vendor.display.config@1.0 \
-	vendor.display.config@2.0 \
-	libdisplayconfig.qti
+	libxml2
 
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+	$(TARGET_OUT_SHARED_LIBRARIES)/android.system.suspend@1.0.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libhardware_legacy.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
